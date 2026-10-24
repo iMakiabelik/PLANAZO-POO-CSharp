@@ -32,3 +32,30 @@ Pregunta de Sustentación
 
 ​¿Por qué es conveniente usar una clase abstracta Evento en lugar de una interfaz para los tipos de evento?
 ​Es más conveniente usar la clase abstracta Evento porque los eventos comparten un estado base y lógica común reutilizable (propiedades como Id, Nombre, Fecha, PrecioBase, CapacidadMaxima y CuposDisponibles, así como los métodos concretos ReducirCupos y AumentarCupos). Una interfaz solo forzaría la firma de los métodos sin permitir compartir implementación de código ni variables de estado, lo que generaría duplicación innecesaria en cada clase de evento.
+
+
+Evidencias de Ejecución
+
+1. Lista de Eventos Registrados
+Carga inicial de datos con cálculo dinámico de precios (Polimorfismo).
+![Lista de Eventos](captura%20prueba%201.png)
+
+2. Validación de Historial Vacío
+Control del sistema cuando aún no existen registros creados.
+![Historial Vacío](captura%20prueba%20error%20en%20caso%20de%20no%20reservar%20.png)
+
+3. Registro de Reserva Exitosa
+Creación de reserva con asignación del código `RES-001` y descuento de cupos.
+![Reserva Exitosa](captura%20reserva%20exitosa.png)
+
+4. Historial de Reservas Activas
+Consulta de la reserva guardada en memoria.
+![Historial](captura%20historial.png)
+
+5. Resumen General
+Resumen de ventas: reservas activas, entradas y recaudo total.
+![Resumen General](captura%20resumen%20general.png)
+
+6. Cancelación de Reserva
+Cancelación del código `RES-001` y restitución automática de los cupos.
+![Reserva Cancelada](captura%20reserva%20cancelada.png)
